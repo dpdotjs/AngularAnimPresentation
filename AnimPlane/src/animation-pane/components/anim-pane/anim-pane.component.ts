@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
   styles: [
     `
       .worldOverlay {
-        width: 60vw;
+        width: 50vw;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -39,7 +39,7 @@ import { Component } from '@angular/core';
         position: absolute;
         display: flex;
         justify-content: center;
-        width: 60vw;
+        width: 50vw;
         height: 100vh;
         top: 0;
       }
@@ -55,7 +55,7 @@ import { Component } from '@angular/core';
       .animationOverlay {
         position: absolute;
         display: flex;
-        width: 60vw;
+        width: 50vw;
         height: 100vh;
         top: 0;
       }

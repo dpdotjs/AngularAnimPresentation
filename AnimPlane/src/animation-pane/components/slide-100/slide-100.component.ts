@@ -7,16 +7,22 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       <ap-runway-light
         [@runwayState]="goDownRunway"
       ></ap-runway-light>
+      <ap-plane></ap-plane>
     </div>
   `,
   styles: [
     `
       .slideWrapper {
         display: flex;
-        height: 100vh;
-        width: 60vw;
+        max-height: 100vh;
+        width: 50vw;
         justify-content: center;
         margin-top: 62vh;
+      }
+
+      ap-plane {
+        position: fixed;
+        bottom: 100px;
       }
     `,
   ],
@@ -27,10 +33,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ]),
   ],
 })
-export class AnimSlide100Component implements AfterViewInit {
-  goDownRunway = false;
-
-  ngAfterViewInit() {
-    this.goDownRunway = true;
-  }
+export class AnimSlide100Component {
+  goDownRunway = true;
 }

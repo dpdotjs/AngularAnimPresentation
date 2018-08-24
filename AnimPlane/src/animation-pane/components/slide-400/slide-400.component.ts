@@ -1,18 +1,20 @@
-import { Component, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Subscription, interval } from 'rxjs';
 
-// A runway light, looping.
+// Plane take-off, easing with delay.
 
 @Component({
-  selector: 'ap-anim-slide-200',
+  selector: 'ap-anim-slide-400',
   template: `
     <div class="slideWrapper">
       <ap-runway-light
         [@runwayState]="goDownRunway"
         [class.hidden]="!goDownRunway"
       ></ap-runway-light>
-      <ap-plane></ap-plane>
+      <ap-plane
+        [@takeOffState]="takeOff"
+      ></ap-plane>
     </div>
   `,
   styles: [
@@ -42,10 +44,15 @@ import { Subscription, interval } from 'rxjs';
       transition('false => true', animate(350)),
       transition('true => false', animate(0)),
     ]),
+    trigger('takeOffState', [
+      state('true', style({ transform: 'translateY(-100vh)' })),
+      transition('* <=> *', animate('1500ms 600ms ease-in')),
+    ]),
   ],
 })
-export class AnimSlide200Component implements AfterViewInit, OnDestroy {
+export class AnimSlide400Component implements AfterViewInit, OnDestroy {
   goDownRunway = true;
+  takeOff = true;
   interval: Subscription;
 
   ngAfterViewInit() {
