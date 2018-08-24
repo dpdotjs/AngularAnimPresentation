@@ -11,6 +11,8 @@ import { Component } from '@angular/core';
       <code ngNonBindable [innerHTML]="codeC"></code>
       <code class="highlight" ngNonBindable [innerHTML]="codeD"></code>
       <code ngNonBindable [innerHTML]="codeE"></code>
+      <code class="highlight" ngNonBindable [innerHTML]="codeF"></code>
+      <code ngNonBindable [innerHTML]="codeG"></code>
     </pre>
   `,
   styles: [``],
@@ -49,7 +51,13 @@ export class CodeSlide100Component {
   codeE = `
     })
     export class MyPage {
-      //...
+`;
+
+  codeF = `
+      goDownRunway = true
+  `;
+
+  codeG = `
     }
   `;
 }
