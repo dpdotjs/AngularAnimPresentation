@@ -29,6 +29,7 @@ export class CodeSlide100Component {
 
   codeC = `
         &gt;&lt;/ap-runway-light>
+        &lt;ap-plane&gt;&lt;/ap-plane&gt;
       &#96;,
       styles: [&#96;
         ...
@@ -40,7 +41,7 @@ export class CodeSlide100Component {
           state('true', 
             style({ transform: 'translateY(39vh)' })
           ),
-          transition('* => *', animate('250ms')),
+          transition('* => *', animate(350)),
         ]),
       ]
   `;
