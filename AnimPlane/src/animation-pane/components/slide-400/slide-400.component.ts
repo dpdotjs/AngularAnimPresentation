@@ -46,7 +46,7 @@ import { Subscription, interval } from 'rxjs';
     ]),
     trigger('takeOffState', [
       state('true', style({ transform: 'translateY(-100vh)' })),
-      transition('* <=> *', animate('1500ms 600ms ease-in')),
+      transition('* <=> *', animate('1500ms ease-in')),
     ]),
   ],
 })

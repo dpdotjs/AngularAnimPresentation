@@ -66,7 +66,7 @@ export class CodeSlide400Component {
           state('true', style({ transform: 'translateY(-100vh)' })),
 `;
   codeDa = `
-          transition('* <=> *', animate('1500ms 600ms ease-in')),
+          transition('* <=> *', animate('1500ms ease-in')),
         ])
       ]
   `;

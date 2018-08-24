@@ -59,7 +59,7 @@ import { Subscription, interval } from 'rxjs';
       transition(
         '* <=> *',
         animate(
-          '2500ms 600ms ease-in',
+          '2500ms ease-in',
           keyframes([
             style({ transform: 'translateY(-40vh)', offset: 0.4 }),
             style({ transform: 'translateY(-60vh) rotate(45deg)', offset: 0.7 }),
